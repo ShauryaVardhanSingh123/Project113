@@ -2,7 +2,7 @@ function setup() {
     canvas=createCanvas(600, 350);
     canvas.center();
     video=createCapture(VIDEO);
-    image(video,0,0,600,500);
+    video.hide();
 }
 
 function draw() {
@@ -14,4 +14,9 @@ function draw() {
     rect(52.5,316,495,20);
     rect(15,53,20,245);
     rect(565,53,20,245);
+    image(video,0,0,600,500);
+}
+
+function takeSnapshot(){
+    save("photo.png")
 }
